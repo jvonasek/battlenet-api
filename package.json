@@ -1,0 +1,26 @@
+{
+  "name": "battlenet-api",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "export $(cat .env | xargs) && npx ts-node index.ts",
+    "play": "export $(cat .env | xargs) && npx ts-node --log-error playground.ts",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/invariant": "^2.2.34",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^14.14.2",
+    "@types/node-fetch": "^2.5.7",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.4.4",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
